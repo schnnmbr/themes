@@ -1,0 +1,29 @@
+/*
+	Theme Name: WideSlider
+	Description: This is the sample theme created for the Genesis Framework.
+	Author: ShopNo2
+	Author URI: http://www.shopno2.com/
+	Version: 2.0.0
+ 
+	Tags: black, orange, white, one-column, two-columns, three-columns, fixed-width, custom-menu, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
+ 
+	Template: genesis
+	Template Version: 2.0.0
+ 
+	License: GPL-2.0+
+	License URI: http://www.opensource.org/licenses/gpl-license.php
+*/
+
+@import url("../genesis/style.css");
+
+.site-header {position:fixed;margin-top:0;width:100%;z-index:999;display:block;height:200px;}
+.nav-primary{
+    margin-top:200px;position:fixed;width:100%;z-index: 999;}
+   .site-inner {margin-top:300px;}
+
+#genesis-responsive-slider {
+border: none !important;
+padding:0 !important;
+margin:0 auto !important;
+}
+.flexislider {width: 100%;}
