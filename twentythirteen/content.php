@@ -12,7 +12,11 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+<<<<<<< HEAD
 		<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
+=======
+		<?php if ( has_post_thumbnail() && ! post_password_required() && ! is_attachment() ) : ?>
+>>>>>>> First commit
 		<div class="entry-thumbnail">
 			<?php the_post_thumbnail(); ?>
 		</div>
@@ -38,8 +42,20 @@
 	</div><!-- .entry-summary -->
 	<?php else : ?>
 	<div class="entry-content">
+<<<<<<< HEAD
 		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentythirteen' ) ); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentythirteen' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
+=======
+		<?php
+			/* translators: %s: Name of current post */
+			the_content( sprintf(
+				__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'twentythirteen' ),
+				the_title( '<span class="screen-reader-text">', '</span>', false )
+			) );
+
+			wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentythirteen' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) );
+		?>
+>>>>>>> First commit
 	</div><!-- .entry-content -->
 	<?php endif; ?>
 

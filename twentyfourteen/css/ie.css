@@ -29,6 +29,13 @@ textarea:focus {
 	border: 1px solid #b2b2b2;
 }
 
+<<<<<<< HEAD
+=======
+.site-title {
+	max-width: 71%;
+}
+
+>>>>>>> First commit
 .site-content blockquote.alignleft,
 .site-content blockquote.alignright {
 	border-top: 1px solid #e5e5e5;
@@ -515,12 +522,20 @@ a.post-thumbnail:hover {
 	margin-right: auto;
 }
 
+<<<<<<< HEAD
 .ie8 .full-width.singular .hentry.has-post-thumbnail {
+=======
+.ie8 .full-width .hentry.has-post-thumbnail:first-child {
+>>>>>>> First commit
 	margin-top: -72px;
 }
 
 
+<<<<<<< HEAD
 .ie8 .singular .hentry.has-post-thumbnail {
+=======
+.ie8 .singular .site-content .hentry.has-post-thumbnail {
+>>>>>>> First commit
 	margin-top: 0;
 }
 

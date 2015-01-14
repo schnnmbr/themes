@@ -4,11 +4,19 @@ Theme URI: http://wordpress.org/themes/twentyfourteen
 Author: the WordPress team
 Author URI: http://wordpress.org/
 Description: In 2014, our default theme lets you create a responsive magazine website with a sleek, modern design. Feature your favorite homepage content in either a grid or a slider. Use the three widget areas to customize your website, and change your content's layout with a full-width page template and a contributor page to show off your authors. Creating a magazine website with WordPress has never been easier.
+<<<<<<< HEAD
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: black, green, white, light, dark, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready, accessibility-ready
 Text Domain: twentyfourteen 
+=======
+Version: 1.3
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, green, white, light, dark, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready, accessibility-ready
+Text Domain: twentyfourteen
+>>>>>>> First commit
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -459,7 +467,11 @@ hr {
 }
 
 /* Support a widely-adopted but non-standard selector for text selection styles
+<<<<<<< HEAD
  * to achieve a better experience. See http://core.trac.wordpress.org/ticket/25898.
+=======
+ * to achieve a better experience. See https://core.trac.wordpress.org/ticket/25898.
+>>>>>>> First commit
  */
 ::selection {
 	background: #24890d;
@@ -502,7 +514,11 @@ textarea:focus {
 /* Buttons */
 
 button,
+<<<<<<< HEAD
 .contributor-posts-link,
+=======
+.button,
+>>>>>>> First commit
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -519,7 +535,12 @@ input[type="submit"] {
 
 button:hover,
 button:focus,
+<<<<<<< HEAD
 .contributor-posts-link:hover,
+=======
+.button:hover,
+.button:focus,
+>>>>>>> First commit
 input[type="button"]:hover,
 input[type="button"]:focus,
 input[type="reset"]:hover,
@@ -531,7 +552,11 @@ input[type="submit"]:focus {
 }
 
 button:active,
+<<<<<<< HEAD
 .contributor-posts-link:active,
+=======
+.button:active,
+>>>>>>> First commit
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
@@ -635,6 +660,10 @@ span > object {
 }
 
 blockquote.alignleft,
+<<<<<<< HEAD
+=======
+figure.wp-caption.alignleft,
+>>>>>>> First commit
 img.alignleft {
 	margin: 7px 24px 7px 0;
 }
@@ -644,6 +673,10 @@ img.alignleft {
 }
 
 blockquote.alignright,
+<<<<<<< HEAD
+=======
+figure.wp-caption.alignright,
+>>>>>>> First commit
 img.alignright {
 	margin: 7px 0 7px 24px;
 }
@@ -693,9 +726,24 @@ img.aligncenter,
 	font-style: italic;
 	line-height: 1.5;
 	margin: 9px 0;
+<<<<<<< HEAD
 	padding-right: 10px;
 }
 
+=======
+}
+
+div.wp-caption .wp-caption-text {
+	padding-right: 10px;
+}
+
+div.wp-caption.alignright img[class*="wp-image-"],
+div.wp-caption.alignright .wp-caption-text {
+	padding-left: 10px;
+	padding-right: 0;
+}
+
+>>>>>>> First commit
 .wp-smiley {
 	border: 0;
 	margin-bottom: 0;
@@ -741,6 +789,11 @@ img.aligncenter,
 .footer-sidebar:after,
 .hentry:before,
 .hentry:after,
+<<<<<<< HEAD
+=======
+.gallery:before,
+.gallery:after,
+>>>>>>> First commit
 .slider-direction-nav:before,
 .slider-direction-nav:after,
 .contributor-info:before,
@@ -757,6 +810,10 @@ img.aligncenter,
 
 .footer-sidebar:after,
 .hentry:after,
+<<<<<<< HEAD
+=======
+.gallery:after,
+>>>>>>> First commit
 .slider-direction-nav:after,
 .contributor-info:after,
 .search-box:after,
@@ -819,7 +876,11 @@ span + .edit-link:before,
  */
 
 /* Ensure that there is no gap between the header and
+<<<<<<< HEAD
    the admin bar for WordPress versions before 3.8. */
+=======
+	 the admin bar for WordPress versions before 3.8. */
+>>>>>>> First commit
 #wpadminbar {
 	min-height: 32px;
 }
@@ -848,11 +909,25 @@ span + .edit-link:before,
 	font-weight: 700;
 	line-height: 48px;
 	margin: 0;
+<<<<<<< HEAD
+=======
+
+	/* Nav-toggle width + search-toggle width - gutter = 86px */
+	max-width: -webkit-calc(100% - 86px);
+	max-width:         calc(100% - 86px);
+>>>>>>> First commit
 }
 
 .site-title a,
 .site-title a:hover {
 	color: #fff;
+<<<<<<< HEAD
+=======
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+>>>>>>> First commit
 }
 
 /* Search in the header */
@@ -985,11 +1060,21 @@ span + .edit-link:before,
 }
 
 .menu-toggle {
+<<<<<<< HEAD
 	cursor: pointer;
 	font-size: 0;
 	height: 48px;
 	margin: 0;
 	overflow: hidden;
+=======
+	background-color: #000;
+	border-radius: 0;
+	cursor: pointer;
+	height: 48px;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+>>>>>>> First commit
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -1000,7 +1085,21 @@ span + .edit-link:before,
 .menu-toggle:before {
 	color: #fff;
 	content: "\f419";
+<<<<<<< HEAD
 	margin-top: 16px;
+=======
+	padding: 16px;
+}
+
+.menu-toggle:active,
+.menu-toggle:focus,
+.menu-toggle:hover {
+	background-color: #444;
+}
+
+.menu-toggle:focus {
+	outline: 1px dotted;
+>>>>>>> First commit
 }
 
 
@@ -1256,7 +1355,15 @@ a.post-thumbnail:hover {
 .entry-content a:hover,
 .entry-summary a:hover,
 .page-content a:hover,
+<<<<<<< HEAD
 .comment-content a:hover {
+=======
+.comment-content a:hover,
+.entry-content a.button,
+.entry-summary a.button,
+.page-content a.button,
+.comment-content a.button {
+>>>>>>> First commit
 	text-decoration: none;
 }
 
@@ -1297,6 +1404,13 @@ a.post-thumbnail:hover {
 	color: #41a62a;
 }
 
+<<<<<<< HEAD
+=======
+.entry-content .more-link {
+	white-space: nowrap;
+}
+
+>>>>>>> First commit
 /* Mediaelements */
 
 .hentry .mejs-container {
@@ -1319,7 +1433,11 @@ a.post-thumbnail:hover {
 
 .hentry .mejs-controls .mejs-time-rail .mejs-time-total,
 .hentry .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total {
+<<<<<<< HEAD
 	background: rgba(255,255,255,.33);
+=======
+	background: rgba(255, 255, 255, .33);
+>>>>>>> First commit
 }
 
 .hentry .mejs-container .mejs-controls .mejs-time {
@@ -1336,6 +1454,86 @@ a.post-thumbnail:hover {
 	background: transparent;
 }
 
+<<<<<<< HEAD
+=======
+.hentry .mejs-overlay-button {
+	background-color: #fff;
+	background-image: none;
+	border-radius: 2px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.8);
+	color: #000;
+	height: 36px;
+	margin-left: -24px;
+	width: 48px;
+}
+
+.hentry .mejs-overlay-button:before {
+	-webkit-font-smoothing: antialiased;
+	content: '\f452';
+	display: inline-block;
+	font: normal 32px/1.125 Genericons;
+	position: absolute;
+	top: 1px;
+	left: 10px;
+}
+
+.hentry .mejs-controls .mejs-button button:focus {
+	outline: none;
+}
+
+.hentry .mejs-controls .mejs-button button {
+	-webkit-font-smoothing: antialiased;
+	background: none;
+	color: #fff;
+	display: inline-block;
+	font: normal 16px/1 Genericons;
+}
+
+.hentry .mejs-playpause-button.mejs-play button:before {
+	content: '\f452';
+}
+
+.hentry .mejs-playpause-button.mejs-pause button:before {
+	content: '\f448';
+}
+
+.hentry .mejs-volume-button.mejs-mute button:before {
+	content: '\f109';
+	font-size: 20px;
+	position: absolute;
+	top: -2px;
+	left: 0;
+}
+
+.hentry .mejs-volume-button.mejs-unmute button:before {
+	content: '\f109';
+	left: 0;
+	position: absolute;
+	top: 0;
+}
+
+.hentry .mejs-fullscreen-button button:before {
+	content: '\f474';
+}
+
+.hentry .mejs-fullscreen-button.mejs-unfullscreen button:before {
+	content: '\f406';
+}
+
+.hentry .mejs-overlay:hover .mejs-overlay-button {
+	background-color: #24890d;
+	color: #fff;
+}
+
+.hentry .mejs-controls .mejs-button button:hover {
+	color: #41a62a;
+}
+
+.content-sidebar .wp-playlist-item .wp-playlist-caption {
+	color: #000;
+}
+
+>>>>>>> First commit
 /* Page links */
 
 .page-links {
@@ -1459,6 +1657,16 @@ a.post-thumbnail:hover {
 	margin-right: 0;
 }
 
+<<<<<<< HEAD
+=======
+.gallery-columns-1.gallery-size-medium figure.gallery-item:nth-of-type(1n+1),
+.gallery-columns-1.gallery-size-thumbnail figure.gallery-item:nth-of-type(1n+1),
+.gallery-columns-2.gallery-size-thumbnail figure.gallery-item:nth-of-type(2n+1),
+.gallery-columns-3.gallery-size-thumbnail figure.gallery-item:nth-of-type(3n+1) {
+	clear: left;
+}
+
+>>>>>>> First commit
 .gallery-caption {
 	background-color: rgba(0, 0, 0, 0.7);
 	-webkit-box-sizing: border-box;
@@ -2208,8 +2416,13 @@ a.post-thumbnail:hover {
 	margin-bottom: 18px;
 }
 
+<<<<<<< HEAD
 .widget input,
 .widget textarea {
+=======
+.widget-area .widget input,
+.widget-area .widget textarea {
+>>>>>>> First commit
 	background-color: rgba(255, 255, 255, 0.1);
 	border-color: rgba(255, 255, 255, 0.2);
 	color: #fff;
@@ -2217,12 +2430,21 @@ a.post-thumbnail:hover {
 	padding: 1px 2px 2px 4px;
 }
 
+<<<<<<< HEAD
 .widget input:focus,
 .widget textarea:focus {
+=======
+.widget-area .widget input:focus,
+.widget-area .widget textarea:focus {
+>>>>>>> First commit
 	border-color: rgba(255, 255, 255, 0.3);
 }
 
 .widget button,
+<<<<<<< HEAD
+=======
+.widget .button,
+>>>>>>> First commit
 .widget input[type="button"],
 .widget input[type="reset"],
 .widget input[type="submit"] {
@@ -2949,7 +3171,11 @@ a.post-thumbnail:hover {
 /* Does the same thing as <meta name="viewport" content="width=device-width">,
  * but in the future W3C standard way. -ms- prefix is required for IE10+ to
  * render responsive styling in Windows 8 "snapped" views; IE10+ does not honor
+<<<<<<< HEAD
  * the meta tag. See http://core.trac.wordpress.org/ticket/25888.
+=======
+ * the meta tag. See https://core.trac.wordpress.org/ticket/25888.
+>>>>>>> First commit
  */
 @-ms-viewport {
 	width: device-width;
@@ -2989,8 +3215,15 @@ a.post-thumbnail:hover {
 	}
 
 	.list-view .site-content .cat-links,
+<<<<<<< HEAD
 	.list-view .site-content .entry-content,
 	.list-view .site-content .entry-summary,
+=======
+	.list-view .site-content .type-post .entry-content,
+	.list-view .site-content .type-page .entry-content,
+	.list-view .site-content .type-post .entry-summary,
+	.list-view .site-content .type-page .entry-summary,
+>>>>>>> First commit
 	.list-view .site-content footer.entry-meta {
 		display: none;
 	}
@@ -3218,7 +3451,11 @@ a.post-thumbnail:hover {
 	}
 
 	.full-width .site-content .has-post-thumbnail .entry-header,
+<<<<<<< HEAD
 	.full-width.singular .site-content .hentry.has-post-thumbnail {
+=======
+	.full-width .site-content .hentry.has-post-thumbnail:first-child {
+>>>>>>> First commit
 		margin-top: -48px;
 	}
 
@@ -3232,6 +3469,10 @@ a.post-thumbnail:hover {
 		float: right;
 		margin-left: -33.33333333%;
 		padding: 48px 30px 24px;
+<<<<<<< HEAD
+=======
+		position: relative;
+>>>>>>> First commit
 		width: 33.33333333%;
 	}
 
@@ -3304,6 +3545,15 @@ a.post-thumbnail:hover {
 }
 
 @media screen and (min-width: 783px) {
+<<<<<<< HEAD
+=======
+	.site-title {
+		/* Search-toggle width = 48px */
+		max-width: -webkit-calc(100% - 48px);
+		max-width:         calc(100% - 48px);
+	}
+
+>>>>>>> First commit
 	.header-main {
 		padding-right: 0;
 	}
@@ -3544,7 +3794,11 @@ a.post-thumbnail:hover {
 		margin-left: 20px;
 	}
 
+<<<<<<< HEAD
 	.full-width.singular .site-content .hentry.has-post-thumbnail {
+=======
+	.full-width .site-content .hentry.has-post-thumbnail:first-child {
+>>>>>>> First commit
 		margin-top: -72px;
 	}
 
@@ -3609,7 +3863,11 @@ a.post-thumbnail:hover {
 
 	.site-description {
 		display: block;
+<<<<<<< HEAD
 		margin: -3px 0 21px;
+=======
+		margin: 0 0 18px;
+>>>>>>> First commit
 	}
 
 	.site-description:empty {

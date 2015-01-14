@@ -40,7 +40,17 @@
 	 * @link http://www.nczonline.net/blog/2013/01/15/fixing-skip-to-content-links/
 	 */
 	_window.on( 'hashchange.twentyfourteen', function() {
+<<<<<<< HEAD
 		var element = document.getElementById( location.hash.substring( 1 ) );
+=======
+		var hash = location.hash.substring( 1 ), element;
+
+		if ( ! hash ) {
+			return;
+		}
+
+		element = document.getElementById( hash );
+>>>>>>> First commit
 
 		if ( element ) {
 			if ( ! /^(?:a|select|input|button|textarea)$/i.test( element.tagName ) ) {
@@ -88,7 +98,11 @@
 				mastheadOffset = $( '#masthead' ).offset().top - toolbarOffset;
 
 				_window.on( 'scroll.twentyfourteen', function() {
+<<<<<<< HEAD
 					if ( ( window.scrollY > mastheadOffset ) && ( mastheadHeight < 49 ) ) {
+=======
+					if ( _window.scrollTop() > mastheadOffset && mastheadHeight < 49 ) {
+>>>>>>> First commit
 						body.addClass( 'masthead-fixed' );
 					} else {
 						body.removeClass( 'masthead-fixed' );
@@ -103,6 +117,7 @@
 		} );
 	} );
 
+<<<<<<< HEAD
 	// Arrange footer widgets vertically.
 	if ( $.isFunction( $.fn.masonry ) ) {
 		$( '#footer-sidebar' ).masonry( {
@@ -118,6 +133,23 @@
 
 	// Initialize Featured Content slider.
 	_window.load( function() {
+=======
+	_window.load( function() {
+		// Arrange footer widgets vertically.
+		if ( $.isFunction( $.fn.masonry ) ) {
+			$( '#footer-sidebar' ).masonry( {
+				itemSelector: '.widget',
+				columnWidth: function( containerWidth ) {
+					return containerWidth / 4;
+				},
+				gutterWidth: 0,
+				isResizable: true,
+				isRTL: $( 'body' ).is( '.rtl' )
+			} );
+		}
+
+		// Initialize Featured Content slider.
+>>>>>>> First commit
 		if ( body.is( '.slider' ) ) {
 			$( '.featured-content' ).featuredslider( {
 				selector: '.featured-content-inner > article',

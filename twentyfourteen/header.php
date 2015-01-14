@@ -15,7 +15,11 @@
 <!--[if IE 8]>
 <html class="ie ie8" <?php language_attributes(); ?>>
 <![endif]-->
+<<<<<<< HEAD
 <!--[if !(IE 7) | !(IE 8) ]><!-->
+=======
+<!--[if !(IE 7) & !(IE 8)]><!-->
+>>>>>>> First commit
 <html <?php language_attributes(); ?>>
 <!--<![endif]-->
 <head>
@@ -35,7 +39,11 @@
 	<?php if ( get_header_image() ) : ?>
 	<div id="site-header">
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+<<<<<<< HEAD
 			<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
+=======
+			<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+>>>>>>> First commit
 		</a>
 	</div>
 	<?php endif; ?>
@@ -49,7 +57,11 @@
 			</div>
 
 			<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
+<<<<<<< HEAD
 				<h1 class="menu-toggle"><?php _e( 'Primary Menu', 'twentyfourteen' ); ?></h1>
+=======
+				<button class="menu-toggle"><?php _e( 'Primary Menu', 'twentyfourteen' ); ?></button>
+>>>>>>> First commit
 				<a class="screen-reader-text skip-link" href="#content"><?php _e( 'Skip to content', 'twentyfourteen' ); ?></a>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 			</nav>

@@ -86,6 +86,10 @@ class Featured_Content {
 		add_filter( $filter,                              array( __CLASS__, 'get_featured_posts' )    );
 		add_action( 'customize_register',                 array( __CLASS__, 'customize_register' ), 9 );
 		add_action( 'admin_init',                         array( __CLASS__, 'register_setting'   )    );
+<<<<<<< HEAD
+=======
+		add_action( 'switch_theme',                       array( __CLASS__, 'delete_transient'   )    );
+>>>>>>> First commit
 		add_action( 'save_post',                          array( __CLASS__, 'delete_transient'   )    );
 		add_action( 'delete_post_tag',                    array( __CLASS__, 'delete_post_tag'    )    );
 		add_action( 'customize_controls_enqueue_scripts', array( __CLASS__, 'enqueue_scripts'    )    );
@@ -96,7 +100,11 @@ class Featured_Content {
 	/**
 	 * Hide "featured" tag from the front-end.
 	 *
+<<<<<<< HEAD
 	 * Has to run on wp_loaded so that the preview filters of the customizer
+=======
+	 * Has to run on wp_loaded so that the preview filters of the Customizer
+>>>>>>> First commit
 	 * have a chance to alter the value.
 	 *
 	 * @static
@@ -105,7 +113,11 @@ class Featured_Content {
 	 */
 	public static function wp_loaded() {
 		if ( self::get_setting( 'hide-tag' ) ) {
+<<<<<<< HEAD
 			add_filter( 'get_terms',     array( __CLASS__, 'hide_featured_term'     ), 10, 2 );
+=======
+			add_filter( 'get_terms',     array( __CLASS__, 'hide_featured_term'     ), 10, 3 );
+>>>>>>> First commit
 			add_filter( 'get_the_terms', array( __CLASS__, 'hide_the_featured_term' ), 10, 3 );
 		}
 	}
@@ -150,6 +162,7 @@ class Featured_Content {
 	 * @return array Array of post IDs.
 	 */
 	public static function get_featured_post_ids() {
+<<<<<<< HEAD
 		// Return array of cached results if they exist.
 		$featured_ids = get_transient( 'featured_content_ids' );
 		if ( ! empty( $featured_ids ) ) {
@@ -190,6 +203,41 @@ class Featured_Content {
 		set_transient( 'featured_content_ids', $featured_ids );
 
 		return $featured_ids;
+=======
+		// Get array of cached results if they exist.
+		$featured_ids = get_transient( 'featured_content_ids' );
+
+		if ( false === $featured_ids ) {
+			$settings = self::get_setting();
+			$term     = get_term_by( 'name', $settings['tag-name'], 'post_tag' );
+
+			if ( $term ) {
+				// Query for featured posts.
+				$featured_ids = get_posts( array(
+					'fields'           => 'ids',
+					'numberposts'      => self::$max_posts,
+					'suppress_filters' => false,
+					'tax_query'        => array(
+						array(
+							'field'    => 'term_id',
+							'taxonomy' => 'post_tag',
+							'terms'    => $term->term_id,
+						),
+					),
+				) );
+			}
+
+			// Get sticky posts if no Featured Content exists.
+			if ( ! $featured_ids ) {
+				$featured_ids = self::get_sticky_posts();
+			}
+
+			set_transient( 'featured_content_ids', $featured_ids );
+		}
+
+		// Ensure correct format before return.
+		return array_map( 'absint', $featured_ids );
+>>>>>>> First commit
 	}
 
 	/**
@@ -202,8 +250,12 @@ class Featured_Content {
 	 * @return array Array of sticky posts.
 	 */
 	public static function get_sticky_posts() {
+<<<<<<< HEAD
 		$settings = self::get_setting();
 		return array_slice( get_option( 'sticky_posts', array() ), 0, $settings['quantity'] );
+=======
+		return array_slice( get_option( 'sticky_posts', array() ), 0, self::$max_posts );
+>>>>>>> First commit
 	}
 
 	/**
@@ -242,10 +294,15 @@ class Featured_Content {
 			return;
 		}
 
+<<<<<<< HEAD
 		$page_on_front = get_option( 'page_on_front' );
 
 		// Bail if the blog page is not the front page.
 		if ( ! empty( $page_on_front ) ) {
+=======
+		// Bail if the blog page is not the front page.
+		if ( 'posts' !== get_option( 'show_on_front' ) ) {
+>>>>>>> First commit
 			return;
 		}
 
@@ -283,7 +340,10 @@ class Featured_Content {
 	 * @since Twenty Fourteen 1.0
 	 *
 	 * @param int $tag_id The term_id of the tag that has been deleted.
+<<<<<<< HEAD
 	 * @return void
+=======
+>>>>>>> First commit
 	 */
 	public static function delete_post_tag( $tag_id ) {
 		$settings = self::get_setting();
@@ -312,7 +372,11 @@ class Featured_Content {
 	 *
 	 * @uses Featured_Content::get_setting()
 	 */
+<<<<<<< HEAD
 	public static function hide_featured_term( $terms, $taxonomies ) {
+=======
+	public static function hide_featured_term( $terms, $taxonomies, $args ) {
+>>>>>>> First commit
 
 		// This filter is only appropriate on the front-end.
 		if ( is_admin() ) {
@@ -329,8 +393,19 @@ class Featured_Content {
 			return $terms;
 		}
 
+<<<<<<< HEAD
 		foreach( $terms as $order => $term ) {
 			if ( self::get_setting( 'tag-id' ) == $term->term_id && 'post_tag' == $term->taxonomy ) {
+=======
+		// Bail if term objects are unavailable.
+		if ( 'all' != $args['fields'] ) {
+			return $terms;
+		}
+
+		$settings = self::get_setting();
+		foreach( $terms as $order => $term ) {
+			if ( ( $settings['tag-id'] === $term->term_id || $settings['tag-name'] === $term->name ) && 'post_tag' === $term->taxonomy ) {
+>>>>>>> First commit
 				unset( $terms[ $order ] );
 			}
 		}
@@ -372,8 +447,14 @@ class Featured_Content {
 			return $terms;
 		}
 
+<<<<<<< HEAD
 		foreach( $terms as $order => $term ) {
 			if ( self::get_setting( 'tag-id' ) == $term->term_id ) {
+=======
+		$settings = self::get_setting();
+		foreach( $terms as $order => $term ) {
+			if ( ( $settings['tag-id'] === $term->term_id || $settings['tag-name'] === $term->name ) && 'post_tag' === $term->taxonomy ) {
+>>>>>>> First commit
 				unset( $terms[ $term->term_id ] );
 			}
 		}
@@ -387,8 +468,11 @@ class Featured_Content {
 	 * @static
 	 * @access public
 	 * @since Twenty Fourteen 1.0
+<<<<<<< HEAD
 	 *
 	 * @return void
+=======
+>>>>>>> First commit
 	 */
 	public static function register_setting() {
 		register_setting( 'featured-content', 'featured-content', array( __CLASS__, 'validate_settings' ) );
@@ -401,19 +485,34 @@ class Featured_Content {
 	 * @access public
 	 * @since Twenty Fourteen 1.0
 	 *
+<<<<<<< HEAD
 	 * @param WP_Customize_Manager $wp_customize Theme Customizer object.
+=======
+	 * @param WP_Customize_Manager $wp_customize Customizer object.
+>>>>>>> First commit
 	 */
 	public static function customize_register( $wp_customize ) {
 		$wp_customize->add_section( 'featured_content', array(
 			'title'          => __( 'Featured Content', 'twentyfourteen' ),
+<<<<<<< HEAD
 			'description'    => sprintf( __( 'Use the <a href="%1$s">"featured" tag</a> to feature your posts. You can change this to a tag of your choice; if no posts match the tag, <a href="%2$s">sticky posts</a> will be displayed instead.', 'twentyfourteen' ), admin_url( '/edit.php?tag=featured' ), admin_url( '/edit.php?show_sticky=1' ) ),
+=======
+			'description'    => sprintf( __( 'Use a <a href="%1$s">tag</a> to feature your posts. If no posts match the tag, <a href="%2$s">sticky posts</a> will be displayed instead.', 'twentyfourteen' ),
+				esc_url( add_query_arg( 'tag', _x( 'featured', 'featured content default tag slug', 'twentyfourteen' ), admin_url( 'edit.php' ) ) ),
+				admin_url( 'edit.php?show_sticky=1' )
+			),
+>>>>>>> First commit
 			'priority'       => 130,
 			'theme_supports' => 'featured-content',
 		) );
 
 		// Add Featured Content settings.
 		$wp_customize->add_setting( 'featured-content[tag-name]', array(
+<<<<<<< HEAD
 			'default'              => 'featured',
+=======
+			'default'              => _x( 'featured', 'featured content default tag slug', 'twentyfourteen' ),
+>>>>>>> First commit
 			'type'                 => 'option',
 			'sanitize_js_callback' => array( __CLASS__, 'delete_transient' ),
 		) );
@@ -472,14 +571,22 @@ class Featured_Content {
 
 		$defaults = array(
 			'hide-tag' => 1,
+<<<<<<< HEAD
 			'quantity' => 6,
 			'tag-id'   => 0,
 			'tag-name' => 'featured',
+=======
+			'tag-id'   => 0,
+			'tag-name' => _x( 'featured', 'featured content default tag slug', 'twentyfourteen' ),
+>>>>>>> First commit
 		);
 
 		$options = wp_parse_args( $saved, $defaults );
 		$options = array_intersect_key( $options, $defaults );
+<<<<<<< HEAD
 		$options['quantity'] = self::sanitize_quantity( $options['quantity'] );
+=======
+>>>>>>> First commit
 
 		if ( 'all' != $key ) {
 			return isset( $options[ $key ] ) ? $options[ $key ] : false;
@@ -523,10 +630,13 @@ class Featured_Content {
 			$output['tag-name'] = $input['tag-name'];
 		}
 
+<<<<<<< HEAD
 		if ( isset( $input['quantity'] ) ) {
 			$output['quantity'] = self::sanitize_quantity( $input['quantity'] );
 		}
 
+=======
+>>>>>>> First commit
 		$output['hide-tag'] = isset( $input['hide-tag'] ) && $input['hide-tag'] ? 1 : 0;
 
 		// Delete the featured post ids transient.
@@ -534,6 +644,7 @@ class Featured_Content {
 
 		return $output;
 	}
+<<<<<<< HEAD
 
 	/**
 	 * Sanitize quantity of featured posts.
@@ -557,6 +668,8 @@ class Featured_Content {
 		return $quantity;
 	}
 
+=======
+>>>>>>> First commit
 } // Featured_Content
 
 Featured_Content::setup();

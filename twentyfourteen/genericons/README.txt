@@ -74,6 +74,17 @@ ____ _  _ ____ _  _ ____ ____ _    ____ ____
 |    |__| |__| |\ | | __ |___ |    |  | | __ 
 |___ |  | |  | | \| |__] |___ |___ |__| |__] 
 
+<<<<<<< HEAD
+=======
+V3.0.3:
+Bunch of updates mostly.
+- Two new icons, Dropbox and Fullscreen.
+- Updates to all icons containing an exclamation mark.
+- Updates to Image and Quote.
+- Nicer "Share" icon.
+- Bigger default Linkedin icon.
+
+>>>>>>> First commit
 V3.0.2: 
 A slew of new stuff and updates.
 - Social icons: Skype, Digg, Reddit, Stumbleupon, Pocket.

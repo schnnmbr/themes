@@ -111,6 +111,12 @@ function twentyfourteen_admin_header_style() {
 		line-height: 48px;
 		margin: 0 0 0 30px;
 	}
+<<<<<<< HEAD
+=======
+	.rtl #headimg h1  {
+		margin: 0 30px 0 0;
+	}
+>>>>>>> First commit
 	#headimg h1 a {
 		color: #fff;
 		text-decoration: none;
@@ -137,7 +143,11 @@ function twentyfourteen_admin_header_image() {
 		<?php if ( get_header_image() ) : ?>
 		<img src="<?php header_image(); ?>" alt="">
 		<?php endif; ?>
+<<<<<<< HEAD
 		<h1 class="displaying-header-text"><a id="name"<?php echo sprintf( ' style="color:#%s;"', get_header_textcolor() ); ?> onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+=======
+		<h1 class="displaying-header-text"><a id="name"<?php echo sprintf( ' style="color:#%s;"', get_header_textcolor() ); ?> onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>" tabindex="-1"><?php bloginfo( 'name' ); ?></a></h1>
+>>>>>>> First commit
 	</div>
 <?php
 }
