@@ -13,11 +13,7 @@ get_header(); ?>
 		<div id="content" class="site-content" role="main">
 
 			<header class="page-header">
-<<<<<<< HEAD
-				<h1 class="page-title"><?php _e( 'Not found', 'twentythirteen' ); ?></h1>
-=======
 				<h1 class="page-title"><?php _e( 'Not Found', 'twentythirteen' ); ?></h1>
->>>>>>> First commit
 			</header>
 
 			<div class="page-wrapper">

@@ -21,10 +21,6 @@
 
 	<div class="entry-content">
 		<?php if ( is_single() || ! get_post_gallery() ) : ?>
-<<<<<<< HEAD
-			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentythirteen' ) ); ?>
-			<?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentythirteen' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
-=======
 			<?php
 			/* translators: %s: Name of current post */
 			the_content( sprintf(
@@ -34,7 +30,6 @@
 
 			wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentythirteen' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) );
 		?>
->>>>>>> First commit
 		<?php else : ?>
 			<?php echo get_post_gallery(); ?>
 		<?php endif; // is_single() ?>

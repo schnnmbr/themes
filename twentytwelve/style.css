@@ -4,17 +4,10 @@ Theme URI: http://wordpress.org/themes/twentytwelve
 Author: the WordPress team
 Author URI: http://wordpress.org/
 Description: The 2012 theme for WordPress is a fully responsive theme that looks great on any device. Features include a front page template with its own widgets, an optional display font, styling for post formats on both index and single views, and an optional no-sidebar page template. Make it yours with a custom menu, header image, and background.
-<<<<<<< HEAD
-Version: 1.3
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: light, gray, white, one-column, two-columns, right-sidebar, flexible-width, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
-=======
 Version: 1.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: light, gray, white, one-column, two-columns, right-sidebar, fluid-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
->>>>>>> First commit
 Text Domain: twentytwelve
 
 This theme, like WordPress, is licensed under the GPL.
@@ -212,10 +205,7 @@ article.format-status footer.entry-meta {
 /* Form fields, general styles first */
 button,
 input,
-<<<<<<< HEAD
-=======
 select,
->>>>>>> First commit
 textarea {
 	border: 1px solid #ccc;
 	border-radius: 3px;
@@ -282,10 +272,7 @@ input[disabled] {
 	cursor: default;
 }
 .menu-toggle:hover,
-<<<<<<< HEAD
-=======
 .menu-toggle:focus,
->>>>>>> First commit
 button:hover,
 input[type="submit"]:hover,
 input[type="button"]:hover,
@@ -604,12 +591,8 @@ a:hover {
 .main-navigation a {
 	color: #5e5e5e;
 }
-<<<<<<< HEAD
-.main-navigation a:hover {
-=======
 .main-navigation a:hover,
 .main-navigation a:focus {
->>>>>>> First commit
 	color: #21759b;
 }
 .main-navigation ul.nav-menu,
@@ -822,12 +805,9 @@ article.sticky .featured-post {
 .comment-content a:visited {
 	color: #9f9f9f;
 }
-<<<<<<< HEAD
-=======
 .entry-content .more-link {
 	white-space: nowrap;
 }
->>>>>>> First commit
 .entry-content ol,
 .comment-content ol,
 .entry-content ul,
@@ -1031,8 +1011,6 @@ footer.entry-meta {
 	margin-top: 1.571428571rem;
 }
 
-<<<<<<< HEAD
-=======
 /* =Single audio/video attachment view
 -------------------------------------------------------------- */
 
@@ -1044,7 +1022,6 @@ footer.entry-meta {
 	margin-bottom: 24px;
 }
 
->>>>>>> First commit
 
 /* =Single image attachment view
 -------------------------------------------------------------- */
@@ -1472,8 +1449,6 @@ img#wpstats {
 /* =Media queries
 -------------------------------------------------------------- */
 
-<<<<<<< HEAD
-=======
 /* Does the same thing as <meta name="viewport" content="width=device-width">,
  * but in the future W3C standard way. -ms- prefix is required for IE10+ to
  * render responsive styling in Windows 8 "snapped" views; IE10+ does not honor
@@ -1486,7 +1461,6 @@ img#wpstats {
 	width: device-width;
 }
 
->>>>>>> First commit
 /* Minimum width of 600 pixels. */
 @media screen and (min-width: 600px) {
 	.author-avatar {
@@ -1551,12 +1525,8 @@ img#wpstats {
 		text-transform: uppercase;
 		white-space: nowrap;
 	}
-<<<<<<< HEAD
-	.main-navigation li a:hover {
-=======
 	.main-navigation li a:hover,
 	.main-navigation li a:focus {
->>>>>>> First commit
 		color: #000;
 	}
 	.main-navigation li {
@@ -1565,32 +1535,20 @@ img#wpstats {
 		position: relative;
 	}
 	.main-navigation li ul {
-<<<<<<< HEAD
-		display: none;
-=======
->>>>>>> First commit
 		margin: 0;
 		padding: 0;
 		position: absolute;
 		top: 100%;
 		z-index: 1;
-<<<<<<< HEAD
-=======
 		height: 1px;
 		width: 1px;
 		overflow: hidden;
 		clip: rect(1px, 1px, 1px, 1px);
->>>>>>> First commit
 	}
 	.main-navigation li ul ul {
 		top: 0;
 		left: 100%;
 	}
-<<<<<<< HEAD
-	.main-navigation ul li:hover > ul {
-		border-left: 0;
-		display: block;
-=======
 	.main-navigation ul li:hover > ul,
 	.main-navigation ul li:focus > ul,
 	.main-navigation .focus > ul {
@@ -1599,7 +1557,6 @@ img#wpstats {
 		overflow: inherit;
 		height: inherit;
 		width: inherit;
->>>>>>> First commit
 	}
 	.main-navigation li ul li a {
 		background: #efefef;
@@ -1614,12 +1571,8 @@ img#wpstats {
 		width: 12.85714286rem;
 		white-space: normal;
 	}
-<<<<<<< HEAD
-	.main-navigation li ul li a:hover {
-=======
 	.main-navigation li ul li a:hover,
 	.main-navigation li ul li a:focus {
->>>>>>> First commit
 		background: #e3e3e3;
 		color: #444;
 	}
@@ -1782,26 +1735,9 @@ img#wpstats {
 		margin: 0;
 		width: auto;
 	}
-<<<<<<< HEAD
-	.singular .entry-header .entry-meta {
-		position: static;
-	}
-	.singular .site-content,
-	.singular .entry-header,
-	.singular .entry-content,
-	.singular footer.entry-meta,
-	.singular .comments-title {
-		margin: 0;
-		width: 100%;
-	}
-	.entry-header .entry-title,
-	.entry-title,
-	.singular .entry-title {
-=======
 
 	.entry-header .entry-title,
 	.entry-title {
->>>>>>> First commit
 		font-size: 21pt;
 	}
 	footer.entry-meta,

@@ -19,11 +19,6 @@
  * @uses register_default_headers() to set up the bundled header images.
  *
  * @since Twenty Thirteen 1.0
-<<<<<<< HEAD
- *
- * @return void
-=======
->>>>>>> First commit
  */
 function twentythirteen_custom_header_setup() {
 	$args = array(
@@ -71,22 +66,13 @@ add_action( 'after_setup_theme', 'twentythirteen_custom_header_setup', 11 );
  * Load our special font CSS files.
  *
  * @since Twenty Thirteen 1.0
-<<<<<<< HEAD
- *
- * @return void
-=======
->>>>>>> First commit
  */
 function twentythirteen_custom_header_fonts() {
 	// Add Source Sans Pro and Bitter fonts.
 	wp_enqueue_style( 'twentythirteen-fonts', twentythirteen_fonts_url(), array(), null );
 
 	// Add Genericons font.
-<<<<<<< HEAD
-	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/fonts/genericons.css', array(), '2.09' );
-=======
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.03' );
->>>>>>> First commit
 }
 add_action( 'admin_print_styles-appearance_page_custom-header', 'twentythirteen_custom_header_fonts' );
 
@@ -96,11 +82,6 @@ add_action( 'admin_print_styles-appearance_page_custom-header', 'twentythirteen_
  * get_header_textcolor() options: Hide text (returns 'blank'), or any hex value.
  *
  * @since Twenty Thirteen 1.0
-<<<<<<< HEAD
- *
- * @return void
-=======
->>>>>>> First commit
  */
 function twentythirteen_header_style() {
 	$header_image = get_header_image();
@@ -120,8 +101,6 @@ function twentythirteen_header_style() {
 			background: url(<?php header_image(); ?>) no-repeat scroll top;
 			background-size: 1600px auto;
 		}
-<<<<<<< HEAD
-=======
 		@media (max-width: 767px) {
 			.site-header {
 				background-size: 768px auto;
@@ -132,7 +111,6 @@ function twentythirteen_header_style() {
 				background-size: 360px auto;
 			}
 		}
->>>>>>> First commit
 	<?php
 		endif;
 
@@ -170,11 +148,6 @@ function twentythirteen_header_style() {
  * Style the header image displayed on the Appearance > Header admin panel.
  *
  * @since Twenty Thirteen 1.0
-<<<<<<< HEAD
- *
- * @return void
-=======
->>>>>>> First commit
  */
 function twentythirteen_admin_header_style() {
 	$header_image = get_header_image();
@@ -241,22 +214,13 @@ function twentythirteen_admin_header_style() {
  * This callback overrides the default markup displayed there.
  *
  * @since Twenty Thirteen 1.0
-<<<<<<< HEAD
- *
- * @return void
-=======
->>>>>>> First commit
  */
 function twentythirteen_admin_header_image() {
 	?>
 	<div id="headimg" style="background: url(<?php header_image(); ?>) no-repeat scroll top; background-size: 1600px auto;">
 		<?php $style = ' style="color:#' . get_header_textcolor() . ';"'; ?>
 		<div class="home-link">
-<<<<<<< HEAD
-			<h1 class="displaying-header-text"><a id="name"<?php echo $style; ?> onclick="return false;" href="#"><?php bloginfo( 'name' ); ?></a></h1>
-=======
 			<h1 class="displaying-header-text"><a id="name"<?php echo $style; ?> onclick="return false;" href="#" tabindex="-1"><?php bloginfo( 'name' ); ?></a></h1>
->>>>>>> First commit
 			<h2 id="desc" class="displaying-header-text"<?php echo $style; ?>><?php bloginfo( 'description' ); ?></h2>
 		</div>
 	</div>

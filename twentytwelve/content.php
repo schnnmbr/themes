@@ -17,14 +17,10 @@
 		</div>
 		<?php endif; ?>
 		<header class="entry-header">
-<<<<<<< HEAD
-			<?php the_post_thumbnail(); ?>
-=======
 			<?php if ( ! post_password_required() && ! is_attachment() ) :
 				the_post_thumbnail();
 			endif; ?>
 
->>>>>>> First commit
 			<?php if ( is_single() ) : ?>
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 			<?php else : ?>

@@ -20,10 +20,6 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-<<<<<<< HEAD
-		<?php the_content(); ?>
-		<?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentythirteen' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
-=======
 		<?php
 			/* translators: %s: Name of current post */
 			the_content( sprintf(
@@ -33,7 +29,6 @@
 
 			wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentythirteen' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) );
 		?>
->>>>>>> First commit
 	</div><!-- .entry-content -->
 
 	<footer class="entry-meta">
